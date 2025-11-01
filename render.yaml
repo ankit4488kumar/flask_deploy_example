@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: flask-intranet-app
+    name: flask-app
     env: python
     buildCommand: ""
-    startCommand: python app.py
-    plan: free
+    startCommand: "gunicorn wsgi:application"
