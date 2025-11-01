@@ -4,9 +4,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello from Flask on the intranet!"
+    return "Welcome to my Flask app deployed on Render!"
+
+@app.route('/hello')
+def hello():
+    return "Hello, Ankit!"
 
 if __name__ == '__main__':
-    # Listen on all IPs so other devices can access it
-    app.run(host='0.0.0.0', port=5000, debug=True)
-`
+    app.run(debug=True)
